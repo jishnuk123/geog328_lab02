@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+
+    <!-- Including the main.css file for styling -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Including the Font Awesome CSS library for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation bar -->
+    <div class="topnav" id="myTopnav">
+        <!-- Links to different sections -->
+        <a href="index.html">Home</a>
+        <a href="section1.html">Interests</a>
+        <a href="section2.html">Goals</a>
+
+        <!-- Active link pointing to the section3.html page -->
+        <a class="active" href="section3.html">Projects</a>
+
+        
+
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links on smaller screens -->
+        <a href="javascript:void(0);" class="icon">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <!-- Page content -->
+  <div class="content">
+    <h1>My Projects</h1>
+    <p>Here are some of the main projects I’ve been developing to strengthen my technical and creative skills:</p>
+
+    <!-- Accordion Section -->
+    <button class="accordion">Project 1: Personal Website (React)</button>
+    <div class="panel">
+      <p>
+        I designed and developed my own personal portfolio website using <strong>React.js</strong> 
+        to showcase my resume, projects, and technical skills. The goal of this project was to 
+        create a clean, responsive, and interactive way for others to learn more about me as a 
+        developer and data enthusiast. The website includes a dynamic project gallery, smooth 
+        navigation, and an about section that highlights my interests in AI and data engineering.
+      </p>
+    </div>
+
+    <button class="accordion">Project 2: Fantasy Football Optimizer (Machine Learning)</button>
+    <div class="panel">
+      <p>
+        This ongoing project involves building a <strong>machine learning model</strong> that 
+        analyzes player performance statistics to optimize fantasy football lineups. I have been 
+        experimenting with regression models and predictive analytics to find patterns in player stats 
+        and matchups. The project combines my interest in sports and data science 
+        helping me apply real-world machine learning concepts in a fun and 
+        competitive context but it is still a work in progress.
+      </p>
+    </div>
+
+    <button class="accordion">Project 3: Spotify Music Recommender System</button>
+    <div class="panel">
+      <p>
+        Another project I have been planning  is a <strong>Spotify music recommender</strong> that 
+        uses machine learning to suggest songs based on a user listening history and mood. 
+        I want the system to utilizes track features such as genre, preference, and likings while 
+        using Spotify’s API to train a recommendation model. This project has not been
+        started yet but I think it will help explore recommendation algorithms, 
+        user-based vs. item-based filtering, and the integration 
+        of AI models with real-world APIs.
+      </p>
+    </div>
+  </div>
+
+  <!-- Accordion functionality -->
+  <script>
+    const acc = document.getElementsByClassName("accordion");
+    for (let i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        let panel = this.nextElementSibling;
+        panel.style.display = panel.style.display === "block" ? "none" : "block";
+      });
+    }
+  </script>
+
+
+    <!-- Including the main.js file for JavaScript functionality -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

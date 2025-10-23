@@ -1,0 +1,160 @@
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: rgb(116, 192, 204);
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 26px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #c75656;
+  color: black;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: #35a469;
+  color: white;
+}
+
+/* Hide the icon that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/* Style for page content */
+.content {
+  padding: 14px;
+  font-size: 22px;
+}
+
+/* When the screen is less than 800 pixels wide */
+@media screen and (max-width: 800px) {
+  /* Hide all links, except for the selected tab */
+  .topnav a:not(.active) {
+    display: none;
+  }
+
+  /* Show the icon that should open and close the topnav */
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* When the screen is less than 800 pixels wide, if the user clicks on the icon */
+/* the "responsive" class attribute will be added to the topnav by the JavaScript code */
+/* This media query sets the style for the unfolded topnav */
+/* It makes the topnav look good on small screens (display the links vertically instead of horizontally)  */
+@media screen and (max-width: 800px) {
+  .topnav.responsive {
+    position: relative;
+  }
+
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+
+/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.content {
+  margin-right: 70px;
+}
+
+/* Style the icon bar links */
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+/* Style the social media icons with color, if you want */
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.instagram{
+  background: #c239dd;
+  color: white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
+}
+
+div.scroll-container {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+}
+
+div.scroll-container img {
+  padding: 10px;
+  width: 400px;          /* set consistent width */
+  height: 250px;         /* set consistent height */
+  object-fit: cover;     /* crops image to fit the box */
+  border-radius: 10px;   /* optional: rounded corners */
+}
+
